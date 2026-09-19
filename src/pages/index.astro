@@ -1,0 +1,321 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SadariStory from "../components/SadariStory.astro";
+import { sadariStories } from "../data/sadariStories";
+
+const careers = [
+  {
+    company: "블루웨이브컨설팅",
+    period: "2024.09 ~ 재직 중",
+    role: "Full-stack Developer · Java Backend 중심",
+    summary: "호텔 예약·결제·알림·전표 연동과 기업 웹사이트 API를 맡았습니다.",
+    projects: [
+      {
+        name: "신라호텔 웹사이트 전면 개편",
+        period: "2025.06 ~ 2026.09",
+        points: [
+          "Oracle OPERA(ORS·OWS)를 연동해 객실 예약 조회·등록·변경·취소와 결과 저장 구현",
+          "예약 알림 BizTalk 공통 모듈과 고객·관리자 호출부, 발송 결과 동기화 스케줄러 구현",
+          "결제·취소 전표를 EAI로 전송하고 미결제 예약 취소와 취소전표 처리를 자동화",
+          "멤버십 상품·기간·사용 이력·가입 및 매출 통계를 구현하고 판매 상태 기준을 하나로 통합",
+          "변경 이력을 보존하는 게시판 데이터 구조와 GA4 dataLayer 기반 사용자 행동 추적 구현"
+        ],
+        proof: "개발자 9명 · 공통 연동·멤버십·데이터 모델링 담당 · 통합 테스트 300건 이상 · 결함 0건 · 일정 준수"
+      },
+      {
+        name: "남양유업 기업 웹사이트 리뉴얼",
+        period: "2024.10 ~ 2025.04",
+        points: [
+          "기업사이트의 모든 게시판형 영역에서 사용자·관리자 화면과 REST API 개발",
+          "고객문의 온라인 접수부터 관리자 처리까지 화면과 백엔드 로직 구현",
+          "직접 작성한 테스트케이스를 기반으로 기능·통합테스트 검증"
+        ],
+        proof: "개발자 9명 · Java 17 · Spring Boot · MyBatis · Oracle · Thymeleaf · JavaScript"
+      }
+    ]
+  },
+  {
+    company: "유원시스템즈",
+    period: "2023.05 ~ 2023.11",
+    role: "Full-stack Developer",
+    summary: "약 27,000명이 사용하는 삼구아이앤씨 ERP의 추가 개발과 유지보수를 담당했습니다.",
+    projects: [
+      {
+        name: "삼구아이앤씨 ERP · e-SEP",
+        period: "그룹웨어 통합 및 업무 기능 추가 개발",
+        points: [
+          "일정·문서관리와 설문 기능을 ERP 안에서 사용할 수 있도록 화면·백엔드·SQL 전체 구현",
+          "설문 문항·선택지·응답·집계 구조를 정의하고 12개 테이블과 전체 기능 설계",
+          "법인차량 업무를 분석해 관련 8개 테이블과 관리 기능을 설계·구현",
+          "연도별 국세청 기준에 맞춘 전산매체와 전사 인원·법인카드·경비원 관리 기능 개발"
+        ],
+        proof: "기획 1명 · DBA 겸 팀장 1명 · 개발 1명 구성에서 요구사항부터 운영 반영까지 단독 담당"
+      }
+    ]
+  }
+];
+
+const metrics = [
+  { value: "0건", label: "신라호텔 담당 기능 결함" },
+  { value: "300+", label: "직접 검증한 통합 테스트" },
+  { value: "27,000명", label: "ERP 서비스 사용자" },
+  { value: "19 → 2", label: "Sadari SQL 실행 횟수" }
+];
+
+const strengths = [
+  {
+    number: "01",
+    title: "앞뒤 업무까지 확인합니다",
+    body: "예약 화면 하나만 보지 않습니다. 결제와 알림, 전표, 취소 상태까지 어떻게 이어지는지 확인한 뒤 구현합니다."
+  },
+  {
+    number: "02",
+    title: "애매하면 바로 묻습니다",
+    body: "기획서의 상태와 예외가 맞지 않으면 실제 사례를 만들어 기획자와 확인합니다. 이 과정에서 구현 전에 여러 모순을 발견했습니다."
+  },
+  {
+    number: "03",
+    title: "데이터 구조를 먼저 봅니다",
+    body: "두 회사 모두 다른 개발자에게는 맡기지 않던 테이블 설계를 담당했습니다. 지금은 실행계획을 읽고 SQL 성능을 측정하는 공부도 이어가고 있습니다."
+  }
+];
+
+---
+
+<BaseLayout
+  title="Suenghyeon Kang · Java Backend Developer"
+  description="예약·결제·알림·전표와 ERP 업무 흐름을 데이터 모델과 트랜잭션으로 구현하는 Java 백엔드 개발자 포트폴리오"
+>
+  <section class="hero section-shell">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Java Backend Developer</p>
+      <h1>기능 하나보다<br /><em>그 뒤의 업무까지</em> 봅니다</h1>
+      <p class="hero-description">
+        예약·결제·알림·전표와 ERP 업무를 개발해 왔습니다.<br class="desktop-only" />
+        왜 이렇게 만들었는지 설명하고, 애매한 부분은 먼저 묻고 테스트로 확인합니다.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#experience">경력 먼저 보기</a>
+        <a class="button button-secondary" href="#sadari">대표 프로젝트 보기</a>
+      </div>
+    </div>
+    <aside class="hero-note" aria-label="백엔드 시스템 흐름">
+      <header class="system-card-header">
+        <span class="system-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>BACKEND FLOW · LIVE</span>
+      </header>
+      <div class="system-map" aria-hidden="true">
+        <div class="system-node node-client"><small>01</small><strong>CLIENT</strong><span>Request</span></div>
+        <div class="system-line"><i></i></div>
+        <div class="system-node node-api"><small>02</small><strong>API</strong><span>Validate</span></div>
+        <div class="system-line"><i></i></div>
+        <div class="system-node node-service"><small>03</small><strong>SERVICE</strong><span>Transaction</span></div>
+        <div class="system-branch">
+          <div><strong>DB</strong><span>Source of truth</span></div>
+          <div><strong>REDIS</strong><span>Session · Cache</span></div>
+        </div>
+      </div>
+      <footer class="system-card-footer">
+        <span><i></i> SYSTEM NORMAL</span>
+        <span>JAVA 17 / SPRING BOOT</span>
+      </footer>
+    </aside>
+  </section>
+
+  <section class="metrics-band" aria-label="주요 성과">
+    <div class="metrics-grid">
+      {metrics.map((metric) => (
+        <article class="metric-card">
+          <strong>{metric.value}</strong>
+          <span>{metric.label}</span>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="experience" class="section-shell section-block">
+    <header class="section-heading">
+      <div>
+        <p class="eyebrow"><span></span> Experience</p>
+        <h2>경력</h2>
+      </div>
+      <p>기획서를 그대로 구현하기보다,<br />상태와 데이터가 끝까지 맞는지 확인했습니다.</p>
+    </header>
+
+    <div class="career-list">
+      {careers.map((career, careerIndex) => (
+        <article class="career-card">
+          <header class="career-header">
+            <span class="career-number">0{careerIndex + 1}</span>
+            <div>
+              <p class="career-period">{career.period}</p>
+              <h3>{career.company}</h3>
+              <p class="career-role">{career.role}</p>
+            </div>
+            <p class="career-summary">{career.summary}</p>
+          </header>
+          <div class="project-list">
+            {career.projects.map((project) => (
+              <section class="project-row">
+                <div class="project-title">
+                  <p>{project.period}</p>
+                  <h4>{project.name}</h4>
+                </div>
+                <div class="project-body">
+                  <ul>
+                    {project.points.map((point) => <li>{point}</li>)}
+                  </ul>
+                  <p class="proof-line"><span>담당과 결과</span>{project.proof}</p>
+                </div>
+              </section>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="sadari" class="project-feature">
+    <div class="section-shell">
+      <article class="sadari-feature">
+        <div class="sadari-copy">
+          <p class="eyebrow"><span></span> Selected Side Project</p>
+          <div class="feature-labels">
+            <span>TEAM LEAD</span><span>BACKEND · DB · INFRA</span><span>DEPLOYED</span>
+          </div>
+          <h2>Sadari <small>독서 기록·모임 서비스</small></h2>
+          <p class="feature-lead">
+            사용자 서비스와 관리자 시스템을 분리하고 62개 테이블을 설계했습니다.
+            인증과 데이터 정합성, 동시성, 파일 보안, 배포까지 운영하면서 생길 문제를 직접 다뤘습니다.
+          </p>
+        </div>
+        <div class="sadari-facts">
+          <div class="feature-results">
+            <div><strong>19 → 2</strong><span>SQL 실행 횟수</span></div>
+            <div><strong>215 → 26ms</strong><span>JDBC 중앙값</span></div>
+            <div><strong>62 Tables</strong><span>서비스 데이터 모델</span></div>
+          </div>
+          <ul class="feature-highlights">
+            <li>JWT sid와 Redis Lua 기반 기기별 세션·토큰 회전</li>
+            <li>DB Outbox를 이용한 관리자 회원 상태 동기화와 재처리</li>
+            <li>Redis 요청 제한·공용 캐시로 외부 도서 API 쿼터 보호</li>
+            <li>행 잠금과 예약 좌석 계산으로 독서 모임 정원 초과 방지</li>
+            <li>이미지 시그니처·해상도 검증과 재인코딩 후 비공개 S3 저장</li>
+            <li>Aho-Corasick 비속어 탐지와 CIELAB 표지 색상 추천</li>
+            <li>별도 관리자 서비스에서 운영 설정·권한·스케줄러 로그 관리</li>
+            <li>Docker·GitHub Actions·GHCR·EC2 배포 자동화</li>
+          </ul>
+          <div class="feature-actions">
+            <a class="button button-inverse" href="#sadari-cases">기술 사례 보기</a>
+            <a class="text-link light-link" href="https://sadaribooks.com" target="_blank" rel="noreferrer">서비스 열기 ↗</a>
+            <a class="text-link light-link" href="https://github.com/hwaiplay/sadari" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="sadari-cases" class="case-overview">
+    <div class="section-shell">
+      <header class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> Architecture</p>
+          <h2>서비스 분리</h2>
+        </div>
+        <p>배포와 권한, 장애 범위를 나누기 위해 사용자 기능과 운영 기능을 분리했습니다.</p>
+      </header>
+      <div class="architecture-frame">
+        <img src="/assets/sadari-architecture.svg" alt="Sadari 사용자와 관리자 서비스 전체 아키텍처" width="2000" height="1400" loading="lazy" />
+      </div>
+      <div class="architecture-notes">
+        <article><span>01</span><h3>사용자 서비스</h3><p>도서·독후감·목표·소셜·독서 모임과 인증 수명주기 처리</p></article>
+        <article><span>02</span><h3>관리자 서비스</h3><p>공통코드·알림 템플릿·권한·스케줄러와 콘텐츠 버전 관리</p></article>
+        <article><span>03</span><h3>운영 인프라</h3><p>MySQL·Redis·Private S3와 GitHub Actions 기반 EC2 배포</p></article>
+      </div>
+    </div>
+  </section>
+
+  {sadariStories.map((story, index) => <SadariStory story={story} position={index} />)}
+
+  <section class="data-proof">
+    <div class="section-shell data-grid">
+      <div class="data-copy">
+        <p class="eyebrow"><span></span> Measured Result</p>
+        <h2>성능 측정</h2>
+        <p>개발 DB에서 준비 10회 후 100회 반복한 단일 연결 JDBC 결과입니다. API 응답 시간이 아닌 DB 조회 구간 측정값임을 구분했습니다.</p>
+      </div>
+      <div class="performance-card">
+        <header><span>JDBC Median</span><strong>87.72% 감소</strong></header>
+        <div class="bar-row before"><div><span>개선 전</span><strong>215.241ms</strong></div><i></i></div>
+        <div class="bar-row after"><div><span>개선 후</span><strong>26.436ms</strong></div><i></i></div>
+        <footer><span>SQL 왕복</span><strong>19회 → 2회</strong></footer>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-shell section-block">
+    <header class="section-heading">
+      <div>
+        <p class="eyebrow"><span></span> How I Work</p>
+        <h2>일하는 방식</h2>
+      </div>
+    </header>
+    <div class="strength-grid">
+      {strengths.map((strength) => (
+        <article class="strength-card">
+          <span>{strength.number}</span>
+          <h3>{strength.title}</h3>
+          <p>{strength.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="profile-band">
+    <div class="section-shell profile-grid">
+      <div>
+        <p class="eyebrow"><span></span> Toolkit</p>
+        <h2>기술</h2>
+      </div>
+      <dl class="tool-list">
+        <div><dt>Backend</dt><dd>Java 8·11·17, Spring Boot, Spring MVC, Spring Framework, 전자정부프레임워크, Spring Security, MyBatis</dd></div>
+        <div><dt>Database</dt><dd>Oracle, MySQL, MS SQL, Redis, T-SQL, PL/SQL</dd></div>
+        <div><dt>View</dt><dd>Thymeleaf, JSP/JSTL, JavaScript, WebSquare</dd></div>
+        <div><dt>Delivery</dt><dd>AWS EC2·RDS·S3, Docker, GitHub Actions, Git, GitLab</dd></div>
+        <div><dt>Tools</dt><dd>Swagger, Postman, ClipReport, 통합 테스트, 실행계획과 성능 측정</dd></div>
+        <div><dt>AI Workflow</dt><dd>Codex를 활용한 설계 검토, 코드 리뷰, 테스트 작성, 오류 분석과 문서화</dd></div>
+      </dl>
+      <div class="profile-meta">
+        <div>
+          <h3>Side Project</h3>
+          <p><strong>Gather</strong> · 모임 서비스</p>
+          <p>2인 팀의 팀장으로 19개 테이블과 백엔드 전체를 설계하고, 행 잠금과 유니크 제약으로 정원 초과와 중복 참여를 방지했습니다.</p>
+          <a class="text-link" href="https://github.com/hwaiplay/gather" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <p><strong>컴퓨터공학 학사</strong> · 건국사이버평생교육원</p>
+          <p>2024.03 ~ 2025.08 · 학점은행제·교육부장관 명의</p>
+          <p><strong>자바 프로그래밍</strong> · (주)이젠아카데미</p>
+          <p>2022.07 ~ 2023.03 · 국가전략산업직종훈련</p>
+        </div>
+        <div>
+          <h3>Certificate</h3>
+          <p><strong>SQLD</strong> · 2025.06</p>
+          <p><strong>리눅스마스터 2급</strong> · 2024.07</p>
+          <p><strong>정보처리산업기사</strong> · 2023.07</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing section-shell">
+    <p class="eyebrow"><span></span> Direction</p>
+    <h2>DB 전문성</h2>
+    <p>먼저 SQL과 데이터 모델링에 강한 백엔드 개발자가 되고,<br class="desktop-only" /> 장기적으로는 시스템과 데이터를 함께 보는 DBA로 성장하고 싶습니다.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="https://github.com/hwaiplay" target="_blank" rel="noreferrer">GitHub 살펴보기</a>
+      <a class="button button-secondary" href="https://docs.google.com/document/d/1xb9e4Y8-E4G5XRPo0c14EXn6K85v2oLBpG6-iMTDQ3w/edit?tab=t.0" target="_blank" rel="noreferrer">이력서 보기</a>
+    </div>
+  </section>
+</BaseLayout>

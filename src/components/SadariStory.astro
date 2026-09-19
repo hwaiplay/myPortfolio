@@ -1,0 +1,32 @@
+---
+import type { SadariStory as SadariStoryData } from "../data/sadariStories";
+
+interface Props {
+  story: SadariStoryData;
+  position: number;
+}
+
+const { story, position } = Astro.props;
+const isReversed = position % 2 === 1;
+---
+
+<section class:list={["sadari-screen-section", "sadari-story-section", { "is-reversed": isReversed }]}>
+  <div class="section-shell sadari-screen-story">
+    <div class="sadari-screen-copy">
+      <span class="screen-number">{story.index}</span>
+      <p class="eyebrow"><span></span> {story.eyebrow}</p>
+      <h2>{story.title}</h2>
+      <p>{story.description}</p>
+      <ul class="story-points">
+        {story.points.map((point) => <li>{point}</li>)}
+      </ul>
+    </div>
+
+    <figure class:list={["sadari-screen-item", { "is-diagram": story.screen.diagram }]}>
+      <div class="sadari-screen-frame">
+        <img src={story.screen.src} alt={story.screen.alt} loading="lazy" />
+      </div>
+      <figcaption>{story.screen.caption}</figcaption>
+    </figure>
+  </div>
+</section>
