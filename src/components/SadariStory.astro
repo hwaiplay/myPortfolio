@@ -22,11 +22,15 @@ const isReversed = position % 2 === 1;
       </ul>
     </div>
 
-    <figure class:list={["sadari-screen-item", { "is-diagram": story.screen.diagram }]}>
-      <div class="sadari-screen-frame">
-        <img src={story.screen.src} alt={story.screen.alt} loading="lazy" />
-      </div>
-      <figcaption>{story.screen.caption}</figcaption>
-    </figure>
+    <div class:list={["sadari-screen-gallery", { "has-multiple": story.screens.length > 1 }]}>
+      {story.screens.map((screen) => (
+        <figure class:list={["sadari-screen-item", screen.crop && `is-crop-${screen.crop}`, { "is-diagram": screen.diagram }]}>
+          <div class="sadari-screen-frame">
+            <img src={screen.src} alt={screen.alt} loading="lazy" />
+          </div>
+          <figcaption>{screen.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
   </div>
 </section>
