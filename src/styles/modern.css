@@ -105,13 +105,13 @@ body::before {
   margin-top: 24px;
   padding: clamp(46px, 6vw, 82px);
   overflow: hidden;
-  color: #f5faf7;
+  color: var(--modern-text);
   border-radius: 34px;
   background:
-    radial-gradient(circle at 78% 16%, rgba(99, 230, 190, 0.15), transparent 26%),
-    radial-gradient(circle at 14% 92%, rgba(166, 255, 63, 0.1), transparent 28%),
-    var(--modern-dark);
-  box-shadow: 0 30px 90px rgba(4, 18, 11, 0.18);
+    radial-gradient(circle at 82% 14%, rgba(99, 230, 190, 0.24), transparent 29%),
+    radial-gradient(circle at 10% 94%, rgba(166, 255, 63, 0.2), transparent 30%),
+    linear-gradient(145deg, #fbfdf9 0%, #f1f7f1 54%, #eaf5ee 100%);
+  box-shadow: 0 28px 80px rgba(27, 66, 44, 0.11);
 }
 
 .hero::before {
@@ -119,10 +119,10 @@ body::before {
   z-index: -1;
   inset: 0;
   content: "";
-  opacity: 0.14;
+  opacity: 0.22;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+    linear-gradient(rgba(49, 112, 76, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 112, 76, 0.1) 1px, transparent 1px);
   background-size: 52px 52px;
   mask-image: linear-gradient(to right, black, transparent 76%);
 }
@@ -144,7 +144,7 @@ body::before {
 
 .hero .eyebrow {
   margin-bottom: 16px;
-  color: var(--modern-accent);
+  color: var(--modern-accent-deep);
 }
 
 .hero-name {
@@ -152,14 +152,14 @@ body::before {
   gap: 10px;
   align-items: baseline;
   margin: 0 0 22px;
-  color: #f4faf6;
+  color: var(--modern-text);
   font-size: 16px;
   font-weight: 850;
   letter-spacing: -0.02em;
 }
 
 .hero-name span {
-  color: #819188;
+  color: var(--modern-muted);
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 0.08em;
@@ -187,10 +187,14 @@ body::before {
   font-style: normal;
 }
 
+.hero h1 em {
+  color: #3f8d1e;
+}
+
 .hero-description {
   max-width: 720px;
   margin-top: 28px;
-  color: #c1cec7;
+  color: #526159;
   font-size: clamp(16px, 1.45vw, 19px);
   line-height: 1.8;
 }
@@ -206,10 +210,10 @@ body::before {
 
 .hero-specialties li {
   padding: 8px 12px;
-  color: #d9e3dd;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  color: #33483b;
+  border: 1px solid rgba(44, 97, 65, 0.14);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.76);
   font-size: 11px;
   font-weight: 750;
   letter-spacing: -0.01em;
@@ -220,10 +224,10 @@ body::before {
   width: min(100%, 360px);
   margin-left: auto;
   padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(44, 97, 65, 0.12);
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 60px rgba(35, 75, 51, 0.12);
   backdrop-filter: blur(14px);
 }
 
@@ -249,7 +253,7 @@ body::before {
 .hero-profile-copy > span {
   display: block;
   margin-bottom: 10px;
-  color: var(--modern-accent);
+  color: var(--modern-accent-deep);
   font-size: 9px;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -257,7 +261,7 @@ body::before {
 
 .hero-profile strong {
   display: block;
-  color: #f4faf6;
+  color: var(--modern-text);
   font-size: 19px;
   font-weight: 850;
   line-height: 1.35;
@@ -266,7 +270,7 @@ body::before {
 
 .hero-profile p {
   margin: 10px 0 0;
-  color: #bac7c0;
+  color: #56655d;
   font-size: 13px;
   line-height: 1.7;
 }
@@ -275,8 +279,8 @@ body::before {
   display: block;
   margin-top: 16px;
   padding-top: 15px;
-  color: #819188;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #718078;
+  border-top: 1px solid rgba(44, 97, 65, 0.11);
   font-size: 10px;
   line-height: 1.6;
 }
@@ -286,14 +290,14 @@ body::before {
   align-items: center;
   min-height: 50px;
   padding: 0 8px;
-  color: #b8c7bf;
+  color: #4c5f54;
   font-size: 12px;
   font-weight: 800;
 }
 
 .hero-text-link:hover,
 .hero-text-link:focus-visible {
-  color: var(--modern-accent);
+  color: var(--modern-accent-deep);
 }
 
 .button {
@@ -320,11 +324,19 @@ body::before {
   box-shadow: 0 12px 30px rgba(99, 186, 44, 0.2);
 }
 
+.hero .button-primary {
+  color: #f7fbf8;
+  border-color: #173d2a;
+  background: #173d2a;
+  box-shadow: 0 12px 28px rgba(23, 61, 42, 0.18);
+}
+
 .button-primary:hover,
 .button-primary:focus-visible,
 .hero .button-primary:hover,
 .hero .button-primary:focus-visible {
-  background: #bcff70;
+  border-color: #245e40;
+  background: #245e40;
 }
 
 .button-secondary {
@@ -333,14 +345,15 @@ body::before {
 }
 
 .hero .button-secondary {
-  color: #eef5f1;
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.06);
+  color: var(--modern-text);
+  border-color: rgba(44, 97, 65, 0.18);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .hero .button-secondary:hover,
 .hero .button-secondary:focus-visible {
-  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(44, 97, 65, 0.3);
+  background: #ffffff;
 }
 
 .hero-note {
@@ -1057,11 +1070,11 @@ body::before {
   transform-origin: left;
 }
 
-.motion-ready .data-proof:not(.is-visible) .bar-row.after i {
+.motion-ready .performance-card:not(.is-visible) .bar-row.after i {
   transform: scaleX(0);
 }
 
-.data-proof.is-visible .bar-row.after i {
+.performance-card.is-visible .bar-row.after i {
   animation: growBar 900ms 300ms both cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -1077,34 +1090,55 @@ body::before {
   transform: translateY(-6px);
 }
 
-.motion-ready main > section,
-.motion-ready .career-card,
-.motion-ready .strength-card,
-.motion-ready .engineering-case,
-.motion-ready .screenshot-card {
+.motion-ready .reveal-item {
   opacity: 0;
-  transform: translateY(34px);
-  transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(26px);
+  transition:
+    opacity 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
 }
 
-.motion-ready main > section.is-visible,
-.motion-ready .career-card.is-visible,
-.motion-ready .strength-card.is-visible,
-.motion-ready .engineering-case.is-visible,
-.motion-ready .screenshot-card.is-visible {
+.motion-ready .reveal-item.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0) scale(1);
+  will-change: auto;
 }
 
-.motion-ready .career-card:nth-child(2),
-.motion-ready .strength-card:nth-child(2),
-.motion-ready .screenshot-card:nth-child(2) {
-  transition-delay: 100ms;
+.motion-ready .hero.reveal-item {
+  transform: none;
+  transition-duration: 480ms;
 }
 
-.motion-ready .strength-card:nth-child(3),
-.motion-ready .screenshot-card:nth-child(3) {
-  transition-delay: 200ms;
+.motion-ready .metric-card.reveal-item,
+.motion-ready .skill-card.reveal-item,
+.motion-ready .career-card.reveal-item,
+.motion-ready .strength-card.reveal-item,
+.motion-ready .architecture-notes article.reveal-item,
+.motion-ready .profile-meta > div.reveal-item {
+  transform: translateY(20px) scale(0.985);
+}
+
+.motion-ready .sadari-screen-copy.reveal-item {
+  transform: translateX(-26px);
+}
+
+.motion-ready .sadari-story-section.is-reversed .sadari-screen-copy.reveal-item {
+  transform: translateX(26px);
+}
+
+.motion-ready .sadari-screen-item.reveal-item {
+  transform: translateY(22px) scale(0.975);
+}
+
+.motion-ready .section-heading.reveal-item .eyebrow span {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.motion-ready .section-heading.reveal-item.is-visible .eyebrow span {
+  transform: scaleX(1);
+  transition: transform 520ms 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .motion-ready .hero.is-visible .hero-copy > * {
@@ -1258,7 +1292,7 @@ body::before {
   }
 
   .hero-description {
-    color: #bac7c0;
+    color: #526159;
   }
 
   .hero-profile {
@@ -1401,18 +1435,20 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .system-line i,
   .system-card-footer i,
-  .data-proof.is-visible .bar-row.after i,
+  .performance-card.is-visible .bar-row.after i,
   .motion-ready .hero.is-visible .hero-copy > *,
   .motion-ready .hero.is-visible .hero-profile {
     animation: none;
   }
 
-  .motion-ready main > section,
-  .motion-ready .career-card,
-  .motion-ready .strength-card,
-  .motion-ready .engineering-case,
-  .motion-ready .screenshot-card {
+  .motion-ready .reveal-item {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  .motion-ready .section-heading.reveal-item .eyebrow span {
+    transform: scaleX(1);
+    transition: none;
   }
 }

@@ -79,7 +79,22 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     </footer>
     <script>
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const revealTargets = document.querySelectorAll("main > section, .career-card, .strength-card, .engineering-case, .screenshot-card");
+      const revealTargets = document.querySelectorAll<HTMLElement>([
+        ".hero",
+        ".section-heading",
+        ".metric-card",
+        ".skill-card",
+        ".career-card",
+        ".strength-card",
+        ".sadari-feature",
+        ".architecture-frame",
+        ".architecture-notes article",
+        ".sadari-screen-copy",
+        ".sadari-screen-item",
+        ".data-copy",
+        ".performance-card",
+        ".profile-meta > div"
+      ].join(", "));
       const progress = document.querySelector<HTMLElement>(".scroll-progress");
       const siteHeader = document.querySelector<HTMLElement>(".site-header");
       const siteNav = document.querySelector<HTMLElement>(".site-nav");
@@ -164,6 +179,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         revealTargets.forEach((target) => target.classList.add("is-visible"));
       } else {
         document.documentElement.classList.add("motion-ready");
+
+        revealTargets.forEach((target) => target.classList.add("reveal-item"));
         const revealObserver = new IntersectionObserver((entries, observer) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -171,7 +188,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
               observer.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.12 });
+        }, { threshold: 0.08, rootMargin: "0px 0px -9% 0px" });
 
         revealTargets.forEach((target) => revealObserver.observe(target));
       }
