@@ -174,9 +174,9 @@ body::before {
 }
 
 .hero h1 {
-  max-width: 840px;
-  font-size: clamp(48px, 4.6vw, 72px);
-  line-height: 1.06;
+  max-width: 760px;
+  font-size: clamp(42px, 3.8vw, 60px);
+  line-height: 1.1;
   word-break: keep-all;
   overflow-wrap: normal;
 }
@@ -220,7 +220,7 @@ body::before {
 }
 
 .hero-profile {
-  align-self: stretch;
+  align-self: center;
   width: min(100%, 360px);
   margin-left: auto;
   padding: 12px;
@@ -1280,7 +1280,7 @@ body::before {
 
   .hero h1,
   .case-hero h1 {
-    font-size: clamp(39px, 11.5vw, 52px);
+    font-size: clamp(32px, 9vw, 42px);
     letter-spacing: -0.065em;
     word-break: keep-all;
     overflow-wrap: normal;
