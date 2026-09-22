@@ -144,7 +144,7 @@ export const sadariStories: SadariStory[] = [
   {
     index: "07",
     eyebrow: "Content Safety",
-    title: "콘텐츠 안전",
+    title: "비속어 필터",
     description: "텍스트와 이미지 입력을 그대로 믿지 않고 서버의 신뢰 경계 안에서 다시 검사하고 저장했습니다.",
     points: [
       "Aho-Corasick과 예외 사전으로 기호·반복 문자 우회와 정상 표현을 함께 판정",

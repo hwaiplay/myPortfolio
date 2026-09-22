@@ -9,7 +9,7 @@ const careers = [
     company: "블루웨이브컨설팅",
     period: "2024.09 ~ 재직 중",
     role: "Full-stack Developer · Java Backend 중심",
-    summary: "호텔 예약·결제·알림·전표 연동과 기업 웹사이트 API를 맡았습니다.",
+    summary: "호텔 예약·알림톡·전표 연동과 기업 웹사이트 API를 맡았습니다.",
     projects: [
       {
         name: "신라호텔 웹사이트 전면 개편",
@@ -57,26 +57,26 @@ const careers = [
 ];
 
 const metrics = [
-  { value: "0건", label: "신라호텔 담당 기능 결함" },
-  { value: "300+", label: "직접 검증한 통합 테스트" },
-  { value: "27,000명", label: "ERP 서비스 사용자" },
-  { value: "19 → 2", label: "Sadari SQL 실행 횟수" }
+  { value: "0건", label: "300 건 이상의 통합 테스트 항목에서 담당 기능 결함 0건", textValue: false },
+  { value: "27,000명", label: "ERP 서비스 사용자", textValue: false },
+  { value: "테이블 설계", label: "ERP 업무 테이블 · 버전 관리 설계", textValue: true },
+  { value: "19 → 2", label: "Sadari SQL 실행 횟수", textValue: false }
 ];
 
 const strengths = [
   {
     number: "01",
-    title: "앞뒤 업무까지 확인합니다",
-    body: "예약 화면 하나만 보지 않습니다. 결제와 알림, 전표, 취소 상태까지 어떻게 이어지는지 확인한 뒤 구현합니다."
+    title: "업무의 흐름을 이해합니다",
+    body: "요구사항을 기능 하나로만 보지 않습니다. 업무가 시작되는 배경과 데이터·상태가 다음 단계로 이어지는 과정을 이해한 뒤 구현합니다."
   },
   {
     number: "02",
-    title: "애매하면 바로 묻습니다",
+    title: "질문을 두려워하지 않습니다",
     body: "기획서의 상태와 예외가 맞지 않으면 실제 사례를 만들어 기획자와 확인합니다. 이 과정에서 구현 전에 여러 모순을 발견했습니다."
   },
   {
     number: "03",
-    title: "데이터 구조를 먼저 봅니다",
+    title: "데이터 구조를 설계할 수 있습니다",
     body: "두 회사 모두 다른 개발자에게는 맡기지 않던 테이블 설계를 담당했습니다. 지금은 실행계획을 읽고 SQL 성능을 측정하는 공부도 이어가고 있습니다."
   }
 ];
@@ -128,11 +128,10 @@ const skillGroups = [
 >
   <section class="hero section-shell">
     <div class="hero-copy">
-      <p class="eyebrow"><span></span> Java Backend Developer</p>
       <p class="hero-name">강승현 <span>Suenghyeon Kang</span></p>
       <h1>서비스의 흐름을 이해하고<br /><em>안정적인 운영까지 고려하는</em><br />Java 백엔드 개발자입니다</h1>
       <p class="hero-description">
-        Java와 Spring을 중심으로 호텔 예약·결제·알림·전표 연동과<br class="desktop-only" />
+        Java와 Spring을 중심으로 호텔 예약·알림·전표 연동과<br class="desktop-only" />
         27,000명 규모 ERP의 업무 기능을 구현해 왔습니다.
       </p>
       <ul class="hero-specialties" aria-label="핵심 역량">
@@ -162,7 +161,7 @@ const skillGroups = [
   <section class="metrics-band" aria-label="주요 성과">
     <div class="metrics-grid">
       {metrics.map((metric) => (
-        <article class="metric-card">
+        <article class:list={["metric-card", { "is-text": metric.textValue }]}>
           <strong>{metric.value}</strong>
           <span>{metric.label}</span>
         </article>
@@ -173,10 +172,8 @@ const skillGroups = [
   <section id="skills" class="section-shell section-block skills-section">
     <header class="section-heading">
       <div>
-        <p class="eyebrow"><span></span> 기술</p>
         <h2>Skills</h2>
       </div>
-      <p>도구 이름보다,<br />어떤 문제에 어떻게 적용했는지를 설명합니다.</p>
     </header>
     <div class="skill-grid">
       {skillGroups.map((skill) => (
@@ -197,19 +194,17 @@ const skillGroups = [
   </section>
 
   <section id="experience" class="section-shell section-block">
-    <header class="section-heading">
+    <header class="section-heading experience-heading">
       <div>
-        <p class="eyebrow"><span></span> 경력</p>
         <h2>Experience</h2>
+        <p>기획서를 그대로 구현하기보다, 상태와 데이터가 끝까지 맞는지 확인했습니다.</p>
       </div>
-      <p>기획서를 그대로 구현하기보다,<br />상태와 데이터가 끝까지 맞는지 확인했습니다.</p>
     </header>
 
     <div class="career-list">
-      {careers.map((career, careerIndex) => (
+      {careers.map((career) => (
         <article class="career-card">
           <header class="career-header">
-            <span class="career-number">0{careerIndex + 1}</span>
             <div>
               <p class="career-period">{career.period}</p>
               <h3>{career.company}</h3>
@@ -241,10 +236,8 @@ const skillGroups = [
   <section id="about" class="section-shell section-block work-style-section">
     <header class="section-heading">
       <div>
-        <p class="eyebrow"><span></span> 일하는 방식</p>
         <h2>How I Work</h2>
       </div>
-      <p>구현에 들어가기 전에 업무의 앞뒤와<br />데이터가 맞는지 먼저 확인합니다.</p>
     </header>
     <div class="strength-grid">
       {strengths.map((strength) => (
@@ -301,8 +294,7 @@ const skillGroups = [
     <div class="section-shell">
       <header class="section-heading">
         <div>
-          <p class="eyebrow"><span></span> Architecture</p>
-          <h2>서비스 분리</h2>
+          <h2>Architecture</h2>
         </div>
         <p>배포와 권한, 장애 범위를 나누기 위해 사용자 기능과 운영 기능을 분리했습니다.</p>
       </header>

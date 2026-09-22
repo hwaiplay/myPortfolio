@@ -565,6 +565,11 @@ body::before {
   letter-spacing: -0.06em;
 }
 
+.metric-card.is-text strong {
+  font-size: clamp(22px, 2.2vw, 32px);
+  line-height: 1.15;
+}
+
 .metric-card span {
   color: var(--modern-muted);
   font-size: 12px;
@@ -680,6 +685,18 @@ body::before {
   color: var(--modern-muted);
 }
 
+.experience-heading {
+  grid-template-columns: 1fr;
+}
+
+.experience-heading > div > p {
+  margin: 14px 0 0;
+  color: var(--modern-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
 .career-list {
   gap: 24px;
 }
@@ -698,18 +715,17 @@ body::before {
   transform: translateY(-5px);
 }
 
+.career-header,
+.project-row {
+  grid-template-columns: minmax(280px, 0.65fr) minmax(0, 1fr);
+  column-gap: 44px;
+  align-items: start;
+}
+
 .career-header {
   padding: 32px;
   border-bottom: 1px solid var(--modern-line);
   background: linear-gradient(135deg, #ffffff, #f7faf7);
-}
-
-.career-number {
-  color: var(--modern-accent-deep);
-  font-family: Inter, sans-serif;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 900;
 }
 
 .career-header h3 {
@@ -722,7 +738,7 @@ body::before {
 }
 
 .project-list {
-  padding: 0 32px 12px 122px;
+  padding: 0 32px 12px;
 }
 
 .project-row {
@@ -888,10 +904,12 @@ body::before {
 }
 
 .strength-card h3 {
+  max-width: none;
   font-family: "Pretendard Variable", Pretendard, sans-serif;
-  font-size: 23px;
+  font-size: clamp(16px, 1.55vw, 21px);
   font-weight: 800;
   letter-spacing: -0.04em;
+  white-space: nowrap;
 }
 
 .strength-card:hover p {
@@ -1242,7 +1260,17 @@ body::before {
   }
 
   .project-list {
-    padding-left: 78px;
+    padding: 0 32px 12px;
+  }
+
+  .career-header,
+  .project-row {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .career-summary {
+    grid-column: auto;
   }
 
   .skill-grid {
@@ -1368,6 +1396,10 @@ body::before {
     font-size: 28px;
   }
 
+  .metric-card.is-text strong {
+    font-size: 22px;
+  }
+
   .skill-grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1400,8 +1432,22 @@ body::before {
     padding: 22px;
   }
 
+  .strength-card h3 {
+    font-size: clamp(14px, 4.2vw, 18px);
+    letter-spacing: -0.07em;
+  }
+
   .career-header {
+    grid-template-columns: 1fr;
     padding: 25px 20px;
+  }
+
+  .career-summary {
+    grid-column: auto;
+  }
+
+  .experience-heading > div > p {
+    white-space: normal;
   }
 
   .project-list {
@@ -1409,7 +1455,7 @@ body::before {
   }
 
   .project-row {
-    gap: 18px;
+    row-gap: 18px;
   }
 
   .profile-meta > div {

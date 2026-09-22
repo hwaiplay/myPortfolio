@@ -15,3 +15,87 @@
 {"message":"/src/styles/modern.css","label":"watch","level":"info"}
 {"message":"/src/styles/modern.css","label":"watch","level":"info"}
 {"message":"[200] / 58ms","label":null,"level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"[200] / 18ms","label":null,"level":"info"}
+{"message":"[200] / 40ms","label":null,"level":"info"}
+{"message":"[200] / 43ms","label":null,"level":"info"}
+{"message":"[200] / 10ms","label":null,"level":"info"}
+{"message":"[200] / 43ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 34ms","label":null,"level":"info"}
+{"message":"[200] / 35ms","label":null,"level":"info"}
+{"message":"[200] / 41ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[200] / 94ms","label":null,"level":"info"}
+{"message":"[200] / 27ms","label":null,"level":"info"}
+{"message":"[200] / 69ms","label":null,"level":"info"}
+{"message":"src/layouts/BaseLayout.astro","label":"watch","level":"info"}
+{"message":"[200] / 41ms","label":null,"level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"[200] / 25ms","label":null,"level":"info"}
+{"message":"[200] / 528ms","label":null,"level":"info"}
+{"message":"[200] / 10ms","label":null,"level":"info"}
+{"message":"src/layouts/BaseLayout.astro","label":"watch","level":"info"}
+{"message":"[200] / 57ms","label":null,"level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"[200] / 68ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 60ms","label":null,"level":"info"}
+{"message":"[200] / 25ms","label":null,"level":"info"}
+{"message":"[200] / 21ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"[200] / 73ms","label":null,"level":"info"}
+{"message":"[200] / 41ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 22ms","label":null,"level":"info"}
+{"message":"[200] / 41ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[200] / 42ms","label":null,"level":"info"}
+{"message":"[200] / 8ms","label":null,"level":"info"}
+{"message":"[200] / 52ms","label":null,"level":"info"}
+{"message":"[200] / 7ms","label":null,"level":"info"}
+{"message":"[200] / 39ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 36ms","label":null,"level":"info"}
+{"message":"[200] / 15ms","label":null,"level":"info"}
+{"message":"[200] / 40ms","label":null,"level":"info"}
+{"message":"[200] / 10ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[200] / 40ms","label":null,"level":"info"}
+{"message":"[200] / 8ms","label":null,"level":"info"}
+{"message":"[200] / 63ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"ReferenceError: metrics is not defined\n    at Object.default (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\src\\pages\\index.astro:157:8)\n    at new AstroComponentInstance (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\instance.js:24:30)\n    at createAstroComponentInstance (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\instance.js:81:20)\n    at renderAstroComponent (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\component.js:360:10)\n    at renderComponent (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\component.js:364:12)\n    at eval (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\src\\pages\\index.astro:118:1)\n    at index (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\astro-component.js:16:12)\n    at callComponentAsTemplateResultOrResponse (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\render.js:226:31)\n    at renderToAsyncIterable (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\render.js:258:32)\n    at renderPage (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\page.js:43:30)","label":null,"level":"error"}
+{"message":"metrics is not defined\n  Stack trace:\n    at Object.default (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\src\\pages\\index.astro:157:8)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"ReferenceError: metrics is not defined\n    at Object.default (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\src\\pages\\index.astro:157:8)\n    at new AstroComponentInstance (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\instance.js:24:30)\n    at createAstroComponentInstance (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\instance.js:81:20)\n    at renderAstroComponent (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\component.js:360:10)\n    at renderComponent (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\component.js:364:12)\n    at eval (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\src\\pages\\index.astro:118:1)\n    at index (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\astro-component.js:16:12)\n    at callComponentAsTemplateResultOrResponse (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\render.js:226:31)\n    at renderToAsyncIterable (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\astro\\render.js:258:32)\n    at renderPage (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\node_modules\\astro\\dist\\runtime\\server\\render\\page.js:43:30)","label":null,"level":"error"}
+{"message":"metrics is not defined\n  Stack trace:\n    at Object.default (C:\\Users\\USER\\IdeaProjects\\myPortfolio\\src\\pages\\index.astro:157:8)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"[200] / 21ms","label":null,"level":"info"}
+{"message":"[200] / 1ms","label":null,"level":"info"}
+{"message":"[200] / 48ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 22ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"[200] / 27ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"[200] / 40ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 36ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"/src/styles/modern.css","label":"watch","level":"info"}
+{"message":"[200] / 38ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[200] / 2ms","label":null,"level":"info"}
+{"message":"[200] / 2ms","label":null,"level":"info"}
+{"message":"[200] / 35ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[200] / 36ms","label":null,"level":"info"}
+{"message":"[200] / 2ms","label":null,"level":"info"}
+{"message":"[200] / 36ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
