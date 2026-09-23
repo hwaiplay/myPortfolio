@@ -93,7 +93,7 @@ img {
 }
 
 .brand-copy strong {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.02em;
 }
 
@@ -110,7 +110,7 @@ img {
   align-items: center;
   gap: 28px;
   margin-left: auto;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -227,7 +227,7 @@ img {
   gap: 10px;
   margin: 0 0 22px;
   color: var(--green);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -268,7 +268,7 @@ img {
 .case-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 22px;
   margin-top: 34px;
 }
 
@@ -279,7 +279,7 @@ img {
   min-height: 48px;
   padding: 0 22px;
   border: 1px solid var(--ink);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
   transition: color 180ms ease, background 180ms ease, transform 180ms ease;
 }
@@ -358,9 +358,9 @@ img {
 .note-stack span,
 .tag-list span,
 .feature-labels span {
-  padding: 5px 9px;
+  padding: 5px 20px;
   border: 1px solid currentColor;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -381,10 +381,10 @@ img {
 
 .metric-card {
   display: grid;
-  gap: 6px;
+  gap: 18px;
   min-height: 148px;
   padding: 30px 28px;
-  align-content: center;
+  /*align-content: center;*/
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -410,10 +410,10 @@ img {
 
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.6fr);
   gap: 60px;
   align-items: end;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .section-heading h2,
@@ -432,6 +432,7 @@ img {
   margin: 0;
   color: var(--ink-soft);
   font-size: 14px;
+  text-align: right;
 }
 
 .career-list {
@@ -460,9 +461,9 @@ img {
 
 .career-period,
 .project-title p {
-  margin: 0 0 4px;
+  margin: 0 0 8px;
   color: #727a75;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -475,16 +476,16 @@ img {
 }
 
 .career-role {
-  margin: 5px 0 0;
+  margin: 10px 0 0;
   color: var(--green);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
 }
 
 .career-summary {
   margin: 4px 0 0;
   color: var(--ink-soft);
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .project-list {
@@ -501,7 +502,7 @@ img {
 
 .project-title h4 {
   margin: 8px 0 0;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.45;
 }
 
@@ -517,7 +518,7 @@ img {
   position: relative;
   padding-left: 18px;
   color: var(--ink-soft);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .project-body li::before {
@@ -538,13 +539,13 @@ img {
   padding-top: 17px;
   border-top: 1px dashed var(--line);
   color: var(--ink);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .proof-line span {
   color: var(--orange);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -585,16 +586,16 @@ img {
 
 .sadari-copy h2 small {
   display: block;
-  margin-top: 15px;
+  margin-top: 32px;
   color: #b8cec2;
   font-family: Pretendard, "Noto Sans KR", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0;
 }
 
 .feature-lead {
-  margin: 30px 0 0;
+  margin: 16px 0 0;
   color: #d2ded7;
   font-size: 16px;
 }
@@ -615,23 +616,23 @@ img {
 
 .feature-results strong {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
 }
 
 .feature-results span {
   color: #9fbaab;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .feature-highlights {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 22px;
+  gap: 22px;
   margin: 26px 0 0;
   padding: 0;
   color: #c8d8cf;
-  font-size: 12px;
+  font-size: 16px;
   list-style: none;
 }
 
@@ -654,7 +655,7 @@ img {
 .text-link {
   align-self: center;
   border-bottom: 1px solid currentColor;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
 }
 
@@ -713,17 +714,18 @@ img {
 .sadari-story-section .sadari-screen-copy > p:last-of-type {
   margin: 24px 0 0;
   color: #56625c;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
+  font-weight: 600;
 }
 
 .story-points {
   display: grid;
-  gap: 9px;
+  gap: 6px;
   margin: 22px 0 0;
   padding: 0;
   color: #56625c;
-  font-size: 12px;
+  font-size: 16px;
   list-style: none;
 }
 
@@ -768,7 +770,7 @@ img {
 .sadari-screen-item figcaption {
   margin-top: 10px;
   color: #68736d;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -808,7 +810,7 @@ img {
 
 .strength-card h3 {
   max-width: 240px;
-  margin: 24px 0 14px;
+  margin: 18px 0 14px;
   font-family: Georgia, "Noto Serif KR", serif;
   font-size: 24px;
   font-weight: 500;
@@ -818,7 +820,7 @@ img {
 .strength-card p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .profile-band {
@@ -873,15 +875,19 @@ img {
 .profile-meta h3 {
   margin: 0 0 24px;
   color: var(--green);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .profile-meta p {
-  margin: 7px 0;
+  margin: 14px 0;
   color: var(--ink-soft);
-  font-size: 12px;
+  font-size: 18px;
+}
+
+.profile-meta p strong {
+  font-weight: 800;
 }
 
 .closing {
@@ -915,19 +921,19 @@ img {
 .footer-title {
   margin: 0;
   font-family: Georgia, serif;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .footer-note {
-  margin: 5px 0 0;
+  margin: 8px 0 0;
   color: #aeb8b3;
-  font-size: 11px;
+  font-size: 16px;
 }
 
 .footer-links {
   display: flex;
   gap: 20px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -1034,13 +1040,14 @@ img {
 
 .architecture-notes h3 {
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .architecture-notes p {
   margin: 5px 0 0;
   color: var(--ink-soft);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .engineering-case {
@@ -1130,7 +1137,7 @@ img {
   max-width: 480px;
   margin: 28px 0 0;
   color: #b8c1bd;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .performance-card {
@@ -1144,7 +1151,7 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .performance-card header strong {
@@ -1159,7 +1166,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .bar-row i {
@@ -1252,7 +1259,7 @@ img {
   }
 
   .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .metric-card:nth-child(3) {
@@ -1419,6 +1426,7 @@ img {
 
   .button {
     width: 100%;
+    font-size: 14px !important;
   }
 
   .hero-note {
@@ -1440,6 +1448,10 @@ img {
     padding: 24px 18px;
   }
 
+  .metric-card span {
+    font-size: 14px !important;
+  }
+
   .metric-card strong {
     font-size: 30px;
   }
@@ -1457,7 +1469,7 @@ img {
   }
 
   .section-heading {
-    margin-bottom: 48px;
+    margin-bottom: 8px;
   }
 
   .section-heading h2,
@@ -1469,6 +1481,10 @@ img {
 
   .section-heading > p br {
     display: none;
+  }
+
+  .section-heading > p {
+    text-align: left;
   }
 
   .career-header {

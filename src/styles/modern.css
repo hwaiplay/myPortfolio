@@ -66,7 +66,7 @@ body::before {
 }
 
 .site-nav a {
-  padding: 8px 14px;
+  padding: 8px 20px;
   border-radius: 999px;
 }
 
@@ -137,7 +137,7 @@ body::before {
 
 .eyebrow {
   color: var(--modern-accent-deep);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.16em;
 }
@@ -160,7 +160,7 @@ body::before {
 
 .hero-name span {
   color: var(--modern-muted);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 750;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -176,7 +176,7 @@ body::before {
 .hero h1 {
   max-width: 760px;
   font-size: clamp(36px, 3.2vw, 50px);
-  line-height: 1.1;
+  line-height: 1.35;
   word-break: keep-all;
   overflow-wrap: normal;
 }
@@ -214,7 +214,7 @@ body::before {
   border: 1px solid rgba(44, 97, 65, 0.14);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.76);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 750;
   letter-spacing: -0.01em;
 }
@@ -254,7 +254,7 @@ body::before {
   display: block;
   margin-bottom: 10px;
   color: var(--modern-accent-deep);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.16em;
 }
@@ -271,8 +271,8 @@ body::before {
 .hero-profile p {
   margin: 10px 0 0;
   color: #56655d;
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .hero-profile small {
@@ -291,7 +291,7 @@ body::before {
   min-height: 50px;
   padding: 0 8px;
   color: #4c5f54;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -305,7 +305,7 @@ body::before {
   padding-inline: 22px;
   border: 1px solid transparent;
   border-radius: 14px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 850;
   letter-spacing: -0.01em;
   box-shadow: none;
@@ -560,20 +560,21 @@ body::before {
 .metric-card strong {
   color: var(--modern-text);
   font-family: Inter, "Pretendard Variable", sans-serif;
-  font-size: clamp(30px, 3vw, 44px);
+  /*font-size: clamp(30px, 3vw, 44px);*/
+  font-size: clamp(26px, 2.6vw, 36px);
   font-weight: 850;
   letter-spacing: -0.06em;
 }
 
 .metric-card.is-text strong {
-  font-size: clamp(22px, 2.2vw, 32px);
+  font-size: clamp(26px, 2.6vw, 36px);
   line-height: 1.15;
 }
 
 .metric-card span {
   color: var(--modern-muted);
-  font-size: 12px;
-  font-weight: 650;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .skills-section {
@@ -631,7 +632,7 @@ body::before {
 
 .skill-card h3 {
   margin: 1px 0 0;
-  font-size: 17px;
+  font-size: 24px;
   font-weight: 850;
   letter-spacing: -0.03em;
 }
@@ -639,27 +640,27 @@ body::before {
 .skill-card header p {
   margin: 6px 0 0;
   color: var(--modern-muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
 .skill-card ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 10px;
   margin: 22px 0 0;
   padding: 0;
   list-style: none;
 }
 
 .skill-card li {
-  padding: 7px 9px;
+  padding: 6px 16px;
   color: #405047;
   border: 1px solid #dfe6e1;
   border-radius: 999px;
   background: #f6f9f7;
-  font-size: 10px;
-  font-weight: 750;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .section-block {
@@ -693,7 +694,7 @@ body::before {
 .experience-heading > div > p {
   margin: 14px 0 0;
   color: var(--modern-muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   white-space: nowrap;
 }
@@ -899,7 +900,6 @@ body::before {
 .strength-card > span {
   color: var(--modern-accent-deep);
   font-family: Inter, sans-serif;
-  font-size: 12px;
   font-style: normal;
   font-weight: 900;
 }
@@ -907,7 +907,7 @@ body::before {
 .strength-card h3 {
   max-width: none;
   font-family: "Pretendard Variable", Pretendard, sans-serif;
-  font-size: clamp(16px, 1.55vw, 21px);
+  font-size: clamp(16px, 1.55vw, 24px);
   font-weight: 800;
   letter-spacing: -0.04em;
   white-space: nowrap;
@@ -1365,8 +1365,7 @@ body::before {
   }
 
   .hero-specialties li {
-    padding: 7px 10px;
-    font-size: 10px;
+    padding: 6px 16px;
   }
 
   .hero-actions {
@@ -1458,7 +1457,7 @@ body::before {
   }
 
   .experience-heading {
-    margin-bottom: 32px;
+    margin-bottom: 8px;
   }
 
   .project-list {
@@ -1487,6 +1486,9 @@ body::before {
     transform: translateY(-4px);
   }
 
+  .case-overview .section-heading {
+    margin-bottom: 38px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
