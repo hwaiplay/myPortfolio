@@ -175,7 +175,7 @@ body::before {
 
 .hero h1 {
   max-width: 760px;
-  font-size: clamp(42px, 3.8vw, 60px);
+  font-size: clamp(36px, 3.2vw, 50px);
   line-height: 1.1;
   word-break: keep-all;
   overflow-wrap: normal;
@@ -687,6 +687,7 @@ body::before {
 
 .experience-heading {
   grid-template-columns: 1fr;
+  margin-bottom: 40px;
 }
 
 .experience-heading > div > p {
@@ -1306,7 +1307,13 @@ body::before {
     background-size: 38px 38px;
   }
 
-  .hero h1,
+  .hero h1 {
+    font-size: clamp(28px, 7.5vw, 36px);
+    letter-spacing: -0.065em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
   .case-hero h1 {
     font-size: clamp(32px, 9vw, 42px);
     letter-spacing: -0.065em;
@@ -1448,6 +1455,10 @@ body::before {
 
   .experience-heading > div > p {
     white-space: normal;
+  }
+
+  .experience-heading {
+    margin-bottom: 32px;
   }
 
   .project-list {
