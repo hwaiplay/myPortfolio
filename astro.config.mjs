@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://hwaiplay.pages.dev",
+  site: "https://seunghyeonkang.netlify.app",
   output: "static",
   trailingSlash: "never"
 });
