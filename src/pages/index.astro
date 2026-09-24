@@ -95,22 +95,10 @@ const skillGroups = [
     items: ["Oracle", "MySQL", "MS SQL", "Redis", "PL/SQL", "T-SQL"]
   },
   {
-    kind: "frontend" as const,
-    title: "Frontend",
-    summary: "백엔드 계약이 실제 화면 흐름까지 이어지게 만듭니다.",
-    items: ["Thymeleaf", "JSP/JSTL", "JavaScript", "React", "TypeScript", "WebSquare"]
-  },
-  {
     kind: "cloud" as const,
     title: "Cloud · Delivery",
     summary: "빌드부터 배포와 운영 환경까지 직접 연결합니다.",
     items: ["AWS EC2", "RDS", "S3", "Docker", "GitHub Actions", "GHCR"]
-  },
-  {
-    kind: "tools" as const,
-    title: "Tools · Quality",
-    summary: "요구사항을 테스트와 문서로 남겨 다시 확인할 수 있게 합니다.",
-    items: ["Git", "GitLab", "Swagger", "Postman", "ClipReport", "통합 테스트"]
   },
   {
     kind: "workflow" as const,
@@ -329,6 +317,11 @@ const skillGroups = [
 
   <section class="profile-band">
     <div class="section-shell profile-grid profile-grid-compact">
+      <header class="section-heading">
+        <div>
+          <h2>More About Me</h2>
+        </div>
+      </header>
       <div class="profile-meta">
         <div>
           <h3>Side Project</h3>
