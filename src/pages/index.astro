@@ -255,7 +255,7 @@ const skillGroups = [
         <div class="sadari-facts">
           <div class="feature-results">
             <div><strong>19 → 2</strong><span>SQL 실행 횟수</span></div>
-            <div><strong>215 → 26ms</strong><span>JDBC 중앙값</span></div>
+            <div><strong>219 → 104ms</strong><span>API 응답 중앙값</span></div>
             <div><strong>62 Tables</strong><span>서비스 데이터 모델</span></div>
           </div>
           <ul class="feature-highlights">
@@ -303,13 +303,13 @@ const skillGroups = [
       <div class="data-copy">
         <p class="eyebrow"><span></span> Measured Result</p>
         <h2>성능 측정</h2>
-        <p>개발 DB에서 준비 10회 후 100회 반복한 단일 연결 JDBC 결과입니다. API 응답 시간이 아닌 DB 조회 구간 측정값임을 구분했습니다.</p>
+        <p>개발 DB에서 개선 전·후 서버를 각각 10회 준비한 뒤 100회씩 교차 호출했습니다. 요청 시작부터 응답 본문 수신 완료까지 측정하고 동일한 응답도 확인했습니다.</p>
       </div>
       <div class="performance-card">
-        <header><span>JDBC Median</span><strong>87.72% 감소</strong></header>
-        <div class="bar-row before"><div><span>개선 전</span><strong>215.241ms</strong></div><i></i></div>
-        <div class="bar-row after"><div><span>개선 후</span><strong>26.436ms</strong></div><i></i></div>
-        <footer><span>SQL 왕복</span><strong>19회 → 2회</strong></footer>
+        <header><span>API Median</span><strong>52.51% 감소</strong></header>
+        <div class="bar-row before"><div><span>개선 전</span><strong>219.012ms</strong></div><i></i></div>
+        <div class="bar-row after"><div><span>개선 후</span><strong>103.999ms</strong></div><i></i></div>
+        <footer><span>API DB 호출</span><strong>20회 → 3회</strong></footer>
       </div>
     </div>
   </section>
