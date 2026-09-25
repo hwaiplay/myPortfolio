@@ -8,8 +8,6 @@ const careers = [
   {
     company: "블루웨이브컨설팅",
     period: "2024.09 ~ 재직 중",
-    role: "Full-stack Developer · Java Backend 중심",
-    summary: "호텔 예약·알림톡·전표 연동과 기업 웹사이트 API를 맡았습니다.",
     projects: [
       {
         name: "신라호텔 웹사이트 전면 개편",
@@ -38,8 +36,6 @@ const careers = [
   {
     company: "유원시스템즈",
     period: "2023.05 ~ 2023.11",
-    role: "Full-stack Developer",
-    summary: "약 27,000명이 사용하는 삼구아이앤씨 ERP의 추가 개발과 유지보수를 담당했습니다.",
     projects: [
       {
         name: "삼구아이앤씨 ERP · e-SEP",
@@ -193,11 +189,9 @@ const skillGroups = [
         <article class="career-card">
           <header class="career-header">
             <div>
-              <p class="career-period">{career.period}</p>
               <h3>{career.company}</h3>
-              <p class="career-role">{career.role}</p>
+              <p class="career-period">{career.period}</p>
             </div>
-            <p class="career-summary">{career.summary}</p>
           </header>
           <div class="project-list">
             {career.projects.map((project) => (
