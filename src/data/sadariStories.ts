@@ -38,43 +38,6 @@ export const sadariStories: SadariStory[] = [
   },
   {
     index: "02",
-    eyebrow: "Book Group",
-    title: "독서 모임",
-    description: "가입 신청과 초대, 승인 경로가 달라도 같은 정원 검증을 거치게 해 동시 요청에서도 정원을 넘지 않도록 했습니다.",
-    points: [
-      "모임 행 잠금 이후 확정 회원과 유효한 초대 좌석을 함께 계산",
-      "모임장 권한·차단 관계·중복 가입을 모든 가입 경로에서 재검증"
-    ],
-    screens: [
-      {
-        src: "/assets/screens/book-group-list.png",
-        alt: "Sadari 내 독서 모임 목록 화면",
-        caption: "가입 상태가 반영된 내 모임"
-      },
-      {
-        src: "/assets/screens/book-group-detail.png",
-        alt: "Sadari 독서 모임 상세 화면",
-        caption: "독서 모임 상세와 좌석 현황"
-      }
-    ]
-  },
-  {
-    index: "03",
-    eyebrow: "Notification",
-    title: "알림·푸시",
-    description: "업무 알림을 저장하고 FCM 웹 푸시는 커밋 이후에 발송해 DB 상태와 발송 시점이 어긋나지 않도록 했습니다.",
-    points: [
-      "언어별 템플릿 치환과 업무별 중복 방지 규칙 적용",
-      "FCM 장애가 핵심 업무 트랜잭션을 실패시키지 않도록 발송 격리"
-    ],
-    screens: [{
-      src: "/assets/screens/notification-push-source.png",
-      alt: "Sadari 알림과 웹 푸시 화면",
-      caption: "서비스 알림과 웹 푸시"
-    }]
-  },
-  {
-    index: "04",
     eyebrow: "Book Search",
     title: "도서 검색",
     description: "계정 언어에 따라 Kakao와 Google Books를 전환하되 화면에는 같은 데이터 구조를 전달했습니다.",
@@ -96,7 +59,7 @@ export const sadariStories: SadariStory[] = [
     ]
   },
   {
-    index: "05",
+    index: "03",
     eyebrow: "Reading Goal",
     title: "독서 목표",
     description: "주·월·연 단위로 목표를 세우고 읽은 책과 독서량을 한 화면에서 확인할 수 있게 만들었습니다.",
@@ -115,6 +78,43 @@ export const sadariStories: SadariStory[] = [
         src: "/assets/screens/reading-goal-settings.png",
         alt: "Sadari 독서 목표 설정 화면",
         caption: "기간별 목표 설정"
+      }
+    ]
+  },
+  {
+    index: "04",
+    eyebrow: "Content Safety",
+    title: "비속어 필터",
+    description: "텍스트와 이미지 입력을 그대로 믿지 않고 서버의 신뢰 경계 안에서 다시 검사하고 저장했습니다.",
+    points: [
+      "Aho-Corasick과 예외 사전으로 기호·반복 문자 우회와 정상 표현을 함께 판정",
+      "이미지 시그니처·디코더·해상도 검증 후 EXIF 보정과 재인코딩"
+    ],
+    screens: [{
+      src: "/assets/screens/content-safety-source.png",
+      alt: "Sadari 이미지 선택과 콘텐츠 입력 화면",
+      caption: "콘텐츠 입력과 이미지 처리"
+    }]
+  },
+  {
+    index: "05",
+    eyebrow: "Optimistic Lock",
+    title: "동시 수정 충돌 방지",
+    description: "독후감 수정에는 원본 해시 기반 낙관적 락을 적용했습니다. 상세 조회 시 만든 해시를 수정 요청에 함께 보내, 다른 탭이나 기기에서 먼저 바뀐 내용을 덮어쓰지 않게 했습니다.",
+    points: [
+      "수정 대상 필드의 SHA-256 해시를 UPDATE 조건에 넣어 조회 시점과 현재 상태 비교",
+      "영향받은 행이 없으면 409 Conflict로 응답하고 최신 내용 확인 안내"
+    ],
+    screens: [
+      {
+        src: "/assets/screens/report-edit-conflict.jpg",
+        alt: "Sadari 독후감 동시 수정 충돌 안내 화면",
+        caption: "다른 탭이나 기기의 선행 수정 감지"
+      },
+      {
+        src: "/assets/screens/report-edit-success.jpg",
+        alt: "Sadari 독후감 저장 완료 화면",
+        caption: "원본이 일치하면 정상 저장"
       }
     ]
   },
@@ -143,17 +143,39 @@ export const sadariStories: SadariStory[] = [
   },
   {
     index: "07",
-    eyebrow: "Content Safety",
-    title: "비속어 필터",
-    description: "텍스트와 이미지 입력을 그대로 믿지 않고 서버의 신뢰 경계 안에서 다시 검사하고 저장했습니다.",
+    eyebrow: "Book Group",
+    title: "독서 모임",
+    description: "가입 신청과 초대, 승인 경로가 달라도 같은 정원 검증을 거치게 해 동시 요청에서도 정원을 넘지 않도록 했습니다.",
     points: [
-      "Aho-Corasick과 예외 사전으로 기호·반복 문자 우회와 정상 표현을 함께 판정",
-      "이미지 시그니처·디코더·해상도 검증 후 EXIF 보정과 재인코딩"
+      "모임 행 잠금 이후 확정 회원과 유효한 초대 좌석을 함께 계산",
+      "모임장 권한·차단 관계·중복 가입을 모든 가입 경로에서 재검증"
+    ],
+    screens: [
+      {
+        src: "/assets/screens/book-group-list.png",
+        alt: "Sadari 내 독서 모임 목록 화면",
+        caption: "가입 상태가 반영된 내 모임"
+      },
+      {
+        src: "/assets/screens/book-group-detail.png",
+        alt: "Sadari 독서 모임 상세 화면",
+        caption: "독서 모임 상세와 좌석 현황"
+      }
+    ]
+  },
+  {
+    index: "08",
+    eyebrow: "Notification",
+    title: "알림·푸시",
+    description: "업무 알림을 저장하고 FCM 웹 푸시는 커밋 이후에 발송해 DB 상태와 발송 시점이 어긋나지 않도록 했습니다.",
+    points: [
+      "언어별 템플릿 치환과 업무별 중복 방지 규칙 적용",
+      "FCM 장애가 핵심 업무 트랜잭션을 실패시키지 않도록 발송 격리"
     ],
     screens: [{
-      src: "/assets/screens/content-safety-source.png",
-      alt: "Sadari 이미지 선택과 콘텐츠 입력 화면",
-      caption: "콘텐츠 입력과 이미지 처리"
+      src: "/assets/screens/notification-push-source.png",
+      alt: "Sadari 알림과 웹 푸시 화면",
+      caption: "서비스 알림과 웹 푸시"
     }]
   }
 ];
