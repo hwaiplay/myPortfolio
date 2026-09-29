@@ -297,13 +297,12 @@ const skillGroups = [
       <div class="data-copy">
         <p class="eyebrow"><span></span> Measured Result</p>
         <h2>성능 측정</h2>
-        <p>개발 DB에서 개선 전·후 서버를 각각 10회 준비한 뒤 100회씩 교차 호출했습니다. 요청 시작부터 응답 본문 수신 완료까지 측정하고 동일한 응답도 확인했습니다.</p>
+        <p>독서 목표 310건이 있는 개발 DB에서 별도 인증 세션을 가진 가상 사용자 100명으로 개선 전·후를 각각 10회 준비한 뒤 100회씩 교차 호출했습니다. 응답 본문의 크기와 해시도 동일하게 확인했습니다.</p>
       </div>
       <div class="performance-card">
-        <header><span>API Average</span><strong>52.75% 감소</strong></header>
-        <div class="bar-row before"><div><span>개선 전</span><strong>228.044ms</strong></div><i></i></div>
-        <div class="bar-row after"><div><span>개선 후</span><strong>107.761ms</strong></div><i></i></div>
-        <footer><span>API DB 호출</span><strong>20회 → 3회</strong></footer>
+        <header><span>100 VU API Average</span><strong>51.33% 감소</strong></header>
+        <div class="bar-row before"><div><span>개선 전</span><strong>22.177s</strong></div><i></i></div>
+        <div class="bar-row after"><div><span>개선 후</span><strong>10.794s</strong></div><i></i></div>
       </div>
     </div>
   </section>
