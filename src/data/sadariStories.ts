@@ -124,7 +124,7 @@ export const sadariStories: SadariStory[] = [
     title: "독후감 번역",
     description: "필요한 순간에만 번역을 요청하고 같은 원문은 다시 호출하지 않도록 결과를 재사용했습니다.",
     points: [
-      "원문 해시 기반 번역 캐시로 같은 내용의 중복 번역 방지",
+      "SHA-256 해시로 원문 변경 여부를 확인해 DB에 저장된 번역 결과 재사용",
       "앱 전체 월간 사용량 제한으로 외부 번역 API 비용 통제"
     ],
     screens: [
