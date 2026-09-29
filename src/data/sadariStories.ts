@@ -88,7 +88,6 @@ export const sadariStories: SadariStory[] = [
     description: "텍스트와 이미지 입력을 그대로 믿지 않고 서버의 신뢰 경계 안에서 다시 검사하고 저장했습니다.",
     points: [
       "Aho-Corasick과 예외 사전으로 기호·반복 문자 우회와 정상 표현을 함께 판정",
-      "이미지 시그니처·디코더·해상도 검증 후 EXIF 보정과 재인코딩"
     ],
     screens: [{
       src: "/assets/screens/content-safety-source.png",
