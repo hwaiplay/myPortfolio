@@ -100,9 +100,9 @@ export const sadariStories: SadariStory[] = [
     index: "05",
     eyebrow: "Optimistic Lock",
     title: "동시 수정 충돌 방지",
-    description: "독후감 수정에는 원본 해시 기반 낙관적 락을 적용했습니다. 상세 조회 시 만든 해시를 수정 요청에 함께 보내, 다른 탭이나 기기에서 먼저 바뀐 내용을 덮어쓰지 않게 했습니다.",
+    description: "원본 해시 기반 낙관적 락으로 다른 탭이나 기기의 선행 수정을 감지했습니다.",
     points: [
-      "수정 대상 필드의 SHA-256 해시를 UPDATE 조건에 넣어 조회 시점과 현재 상태 비교",
+      "상세 조회에서 생성한 수정 대상 필드의 SHA-256 해시를 요청과 UPDATE 조건에 포함해 현재 상태와 비교",
       "영향받은 행이 없으면 409 Conflict로 응답하고 최신 내용 확인 안내"
     ],
     screens: [
