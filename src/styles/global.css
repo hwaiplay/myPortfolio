@@ -500,6 +500,10 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
+.project-row:last-child {
+  border-bottom: 0;
+}
+
 .project-title h4 {
   margin: 8px 0 0;
   font-size: 22px;
@@ -530,24 +534,6 @@ img {
   content: "";
   border-radius: 50%;
   background: var(--orange);
-}
-
-.proof-line {
-  display: flex;
-  gap: 14px;
-  margin: 22px 0 0;
-  padding-top: 17px;
-  border-top: 1px dashed var(--line);
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.proof-line span {
-  color: var(--orange);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .project-feature {
@@ -1510,11 +1496,6 @@ img {
 
   .project-row {
     padding-block: 30px;
-  }
-
-  .proof-line {
-    display: grid;
-    gap: 5px;
   }
 
   .feature-results {
