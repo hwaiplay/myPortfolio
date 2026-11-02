@@ -13,13 +13,23 @@ const isReversed = position % 2 === 1;
 <section class:list={["sadari-screen-section", "sadari-story-section", { "is-reversed": isReversed }]}>
   <div class="section-shell sadari-screen-story">
     <div class="sadari-screen-copy">
-      <span class="screen-number">{story.index}</span>
       <p class="eyebrow"><span></span> {story.eyebrow}</p>
       <h2>{story.title}</h2>
       <p>{story.description}</p>
-      <ul class="story-points">
-        {story.points.map((point) => <li>{point}</li>)}
-      </ul>
+      {story.details ? (
+        <dl class="case-story story-details">
+          {story.details.map((detail) => (
+            <div>
+              <dt>{detail.label}</dt>
+              <dd>{detail.text}</dd>
+            </div>
+          ))}
+        </dl>
+      ) : story.points ? (
+        <ul class="story-points">
+          {story.points.map((point) => <li>{point}</li>)}
+        </ul>
+      ) : null}
     </div>
 
     <div class:list={["sadari-screen-gallery", { "has-multiple": story.screens.length > 1 }]}>

@@ -646,7 +646,7 @@ img {
 }
 
 .sadari-screen-section {
-  padding-block: 110px;
+  padding-block: 64px;
   background: var(--paper-light);
 }
 
@@ -671,16 +671,6 @@ img {
 
 .sadari-screen-copy {
   position: relative;
-}
-
-.screen-number {
-  display: block;
-  margin-bottom: 28px;
-  color: #b4beb7;
-  font-family: Inter, Pretendard, sans-serif;
-  font-size: 52px;
-  font-weight: 800;
-  line-height: 1;
 }
 
 .sadari-screen-copy h2 {
@@ -1108,6 +1098,19 @@ img {
   font-size: 14px;
 }
 
+.sadari-screen-copy .story-details {
+  margin-top: 28px;
+}
+
+.sadari-screen-copy .story-details dd {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.sadari-screen-copy .story-details div:last-child {
+  border-bottom: 0;
+}
+
 .case-content .tag-list {
   margin-top: 26px;
   color: var(--green);
@@ -1463,7 +1466,7 @@ img {
   }
 
   .sadari-screen-section {
-    padding-block: 78px;
+    padding-block: 52px;
   }
 
   .section-heading {
